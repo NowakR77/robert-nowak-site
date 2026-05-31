@@ -43,6 +43,8 @@ const projects = [
     tags: ["Python", "OpenCV", "Raspberry Pi", "Servo"],
     status: "Built",
     statusColor: "accent" as const,
+    href: "https://www.youtube.com/watch?v=xHK-wv2JG18&list=LL&index=55&t=16s",
+    linkLabel: "Watch on YouTube →",
   },
 ]
 
