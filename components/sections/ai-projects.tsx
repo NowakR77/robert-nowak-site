@@ -14,6 +14,8 @@ const projects = [
     tags: ["Python", "Docker", "VPS", "Telegram", "Claude"],
     status: "Live",
     statusColor: "accent" as const,
+    href: "https://www.youtube.com/watch?v=gb5TlGw6Uks&list=LL",
+    linkLabel: "Watch on YouTube →",
   },
   {
     name: "AI Avatar",

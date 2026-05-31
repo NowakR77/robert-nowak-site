@@ -9,6 +9,8 @@ interface ProjectCardProps {
   tags: string[]
   status: string
   statusColor: "accent" | "muted"
+  href?: string
+  linkLabel?: string
   className?: string
 }
 
@@ -19,6 +21,8 @@ export function ProjectCard({
   tags,
   status,
   statusColor,
+  href,
+  linkLabel = "Watch →",
   className,
 }: ProjectCardProps) {
   return (
@@ -69,6 +73,17 @@ export function ProjectCard({
             </span>
           ))}
         </div>
+
+        {href && (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 font-mono text-[11px] text-accent hover:text-foreground tracking-[0.2em] uppercase transition-colors duration-300 pt-1"
+          >
+            {linkLabel}
+          </a>
+        )}
       </div>
     </div>
   )
