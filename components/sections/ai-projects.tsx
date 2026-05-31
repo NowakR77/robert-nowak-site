@@ -25,6 +25,8 @@ const projects = [
     tags: ["HeyGen", "AI Video", "Digital Twin"],
     status: "Built",
     statusColor: "accent" as const,
+    href: "https://www.youtube.com/watch?v=xHZ3kfzP6YY",
+    linkLabel: "Watch on YouTube →",
   },
   {
     name: "Call Center Agent",
