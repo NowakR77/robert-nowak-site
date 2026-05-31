@@ -9,14 +9,14 @@ const dogs = [
     breed: "Havapoo",
     description:
       "The elder statesman. Calm, deliberate, and completely convinced he is in charge. He is.",
-    image: "https://placehold.co/480x600/100E0A/C8A96E?text=Tobi",
+    image: "https://placehold.co/480x600/2A2218/C8A96E?text=Tobi",
   },
   {
     name: "Benny",
     breed: "Havapoo",
     description:
       "Pure enthusiasm in a small package. Benny approaches every morning like it's the best thing that has ever happened to him. He is usually right.",
-    image: "https://placehold.co/480x600/100E0A/C8A96E?text=Benny",
+    image: "https://placehold.co/480x600/2A2218/C8A96E?text=Benny",
   },
 ]
 
@@ -110,7 +110,7 @@ export function Dogs() {
                     <img
                       src={dog.image}
                       alt={dog.name}
-                      className="w-full h-full object-cover opacity-45 group-hover:opacity-60 group-hover:scale-[1.03] transition-all duration-700"
+                      className="w-full h-full object-cover opacity-75 group-hover:opacity-90 group-hover:scale-[1.03] transition-all duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0C0A07] via-[#0C0A07]/30 to-transparent" />
 
