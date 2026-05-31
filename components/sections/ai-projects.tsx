@@ -34,7 +34,7 @@ const projects = [
     tags: ["n8n", "Vapi", "Voice AI", "LLM"],
     status: "Deployed",
     statusColor: "accent" as const,
-    href: "https://www.youtube.com/watch?v=w0H1-b044KY&t=2102s",
+    href: "https://www.youtube.com/watch?v=8K1z-5-74w8",
     linkLabel: "Watch on YouTube →",
   },
   {
