@@ -109,6 +109,45 @@ export function Fitness() {
               </motion.div>
             </div>
 
+            {/* Life Time Frisco */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="grid lg:grid-cols-2 gap-8 items-center border border-[rgba(200,169,110,0.08)] hover:border-[rgba(200,169,110,0.18)] transition-colors duration-500 overflow-hidden"
+              style={{ background: "#0E1014" }}
+            >
+              {/* Image */}
+              <div className="relative overflow-hidden aspect-[4/3] bg-[#131318]">
+                <img
+                  src="https://placehold.co/600x450/131318/C8A96E?text=Life+Time+Frisco"
+                  alt="Life Time Frisco"
+                  className="w-full h-full object-cover opacity-80"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0E1014]/60" />
+              </div>
+
+              {/* Info */}
+              <div className="space-y-5 p-8 lg:p-10">
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-px bg-accent" />
+                  <p className="font-mono text-[11px] text-accent tracking-[0.25em] uppercase">Where I train</p>
+                </div>
+                <h3 className="font-cormorant font-semibold text-3xl lg:text-4xl text-foreground tracking-[-0.01em]">
+                  Life Time Frisco
+                </h3>
+                <p className="font-sans text-muted-foreground leading-relaxed">
+                  More athletic resort than gym. Life Time Frisco is where the discipline happens —
+                  a 100,000+ sq ft facility with everything from free weights and machines to
+                  indoor pools, group training, and a full spa. It&rsquo;s the kind of place that
+                  makes excuses harder to sustain.
+                </p>
+                <p className="font-sans text-sm text-muted-foreground/60 leading-relaxed">
+                  Frisco, TX &mdash; open daily
+                </p>
+              </div>
+            </motion.div>
+
             {/* Divider */}
             <motion.div
               initial={{ opacity: 0, scaleX: 0 }}
