@@ -34,6 +34,8 @@ const projects = [
     tags: ["n8n", "Vapi", "Voice AI", "LLM"],
     status: "Deployed",
     statusColor: "accent" as const,
+    href: "https://www.youtube.com/watch?v=w0H1-b044KY&t=2102s",
+    linkLabel: "Watch on YouTube →",
   },
   {
     name: "Face-Tracking Camera",
