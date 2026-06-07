@@ -9,14 +9,14 @@ const dogs = [
     breed: "Havapoo",
     description:
       "The elder statesman. Calm, deliberate, and completely convinced he is in charge. He is.",
-    image: "https://placehold.co/480x600/2A2218/C8A96E?text=Tobi",
+    image: "/tobi.jpg",
   },
   {
     name: "Benny",
     breed: "Havapoo",
     description:
       "Pure enthusiasm in a small package. Benny approaches every morning like it's the best thing that has ever happened to him. He is usually right.",
-    image: "https://placehold.co/480x600/2A2218/C8A96E?text=Benny",
+    image: "/benny.jpg",
   },
 ]
 
