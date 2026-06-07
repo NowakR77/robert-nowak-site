@@ -63,9 +63,9 @@ export function Fitness() {
                   transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
                   className="font-cormorant font-light text-[clamp(2.8rem,6vw,5rem)] text-foreground leading-[1.05] tracking-[-0.01em]"
                 >
-                  The pace of change
+                  Build things.
                   <br />
-                  <span className="italic text-accent">is the challenge.</span>
+                  <span className="italic text-accent">See what breaks.</span>
                 </motion.h2>
 
                 <motion.blockquote
@@ -75,9 +75,9 @@ export function Fitness() {
                   className="border-l-2 border-accent pl-8 py-1"
                 >
                   <p className="font-cormorant italic text-xl lg:text-2xl text-foreground/75 leading-relaxed">
-                    &ldquo;Every month brings a new model, a new platform, a new framework. The
-                    question isn&rsquo;t whether to keep up — it&rsquo;s how to keep up without
-                    losing yourself in the process.&rdquo;
+                    &ldquo;The most useful thing I&rsquo;ve done with any new technology is try to
+                    build something with it. Often it fails. That&rsquo;s when the real learning
+                    starts.&rdquo;
                   </p>
                 </motion.blockquote>
               </div>
@@ -89,16 +89,15 @@ export function Fitness() {
                 className="space-y-5 font-sans text-muted-foreground leading-relaxed"
               >
                 <p>
-                  Technology is compressing the time between invention and obsolescence. What
-                  used to take a decade now takes eighteen months. For senior leaders, the
-                  gap between what&rsquo;s technically possible and what your organisation can
-                  actually absorb is widening every quarter.
+                  My approach to technology has never been to track it — it&rsquo;s been to touch
+                  it. Pick something, build something with it, see what happens. The feedback
+                  loop is immediate and honest in a way that reading about it never is.
                 </p>
                 <p>
-                  Staying current isn&rsquo;t just professional hygiene — it&rsquo;s a survival skill.
-                  But the way most people try to keep up is unsustainable: tab overload,
-                  newsletter subscriptions, endless podcasts, FOMO-driven context-switching.
-                  That&rsquo;s not learning; that&rsquo;s anxiety dressed up as productivity.
+                  Failing at something small and concrete teaches more than consuming the right
+                  content ever does. I&rsquo;m genuinely curious — not because curiosity is a
+                  virtue worth signalling, but because building things is interesting, and the
+                  only way to find out if something works is to try it.
                 </p>
                 <p>
                   Physical discipline helps. The same principles that make training work —

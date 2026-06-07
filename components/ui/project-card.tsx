@@ -11,6 +11,8 @@ interface ProjectCardProps {
   statusColor: "accent" | "muted"
   href?: string
   linkLabel?: string
+  image?: string
+  video?: string
   className?: string
 }
 
@@ -23,12 +25,14 @@ export function ProjectCard({
   statusColor,
   href,
   linkLabel = "Watch →",
+  image,
+  video,
   className,
 }: ProjectCardProps) {
   return (
     <div
       className={cn(
-        "group relative bg-surface border border-[rgba(200,169,110,0.08)] rounded-sm p-8 overflow-hidden",
+        "group relative bg-surface border border-[rgba(200,169,110,0.08)] rounded-sm overflow-hidden",
         "hover:border-[rgba(200,169,110,0.3)] transition-all duration-500",
         "hover:-translate-y-1 hover:shadow-[0_20px_60px_-15px_rgba(200,169,110,0.08)]",
         className
@@ -37,7 +41,29 @@ export function ProjectCard({
       {/* Hover glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-[rgba(200,169,110,0.04)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-      <div className="relative z-10 space-y-4">
+      {(video || image) && (
+        <div className="relative w-full h-48 overflow-hidden">
+          {video ? (
+            <video
+              src={video}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+            />
+          ) : (
+            <img
+              src={image}
+              alt={name}
+              className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-700"
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(9,9,12,0.6)]" />
+        </div>
+      )}
+
+      <div className="relative z-10 space-y-4 p-8">
         <div className="flex items-start justify-between gap-4">
           <div>
             <h3 className="font-cormorant font-semibold text-2xl text-foreground tracking-[-0.01em]">

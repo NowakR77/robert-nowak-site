@@ -27,6 +27,7 @@ const projects = [
     statusColor: "accent" as const,
     href: "https://www.youtube.com/watch?v=xHZ3kfzP6YY",
     linkLabel: "Watch on YouTube →",
+    video: "/avatar.mp4",
   },
   {
     name: "Call Center Agent",
@@ -49,6 +50,7 @@ const projects = [
     statusColor: "accent" as const,
     href: "https://www.youtube.com/watch?v=xHK-wv2JG18&list=LL&index=55&t=16s",
     linkLabel: "Watch on YouTube →",
+    image: "/camera.jpg",
   },
 ]
 
