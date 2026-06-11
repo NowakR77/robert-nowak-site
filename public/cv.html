@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Robert Nowak — CFO</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap');
+
+  :root {
+    --bg:        #0A0907;
+    --bg-card:   #111009;
+    --gold:      #C8A96E;
+    --gold-dim:  #8A7049;
+    --white:     #F0EBE3;
+    --muted:     #7A7060;
+    --rule:      #2A2518;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1.65;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 56px 60px;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 32px;
+    margin-bottom: 36px;
+    gap: 24px;
+  }
+
+  .header-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 56px;
+    letter-spacing: 0.06em;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .header-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 32px;
+    text-align: right;
+  }
+
+  .contact-item {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+
+  .contact-item a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+
+  .contact-item a:hover { color: var(--gold); }
+
+  /* ── LAYOUT ── */
+  .body-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 0 48px;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {}
+
+  .section-label {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 16px;
+    margin-top: 36px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .sidebar .section-label:first-child { margin-top: 0; }
+
+  .about-text {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  .skill-list {
+    list-style: none;
+  }
+
+  .skill-list li {
+    font-size: 11.5px;
+    color: var(--white);
+    padding: 5px 0;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .skill-list li::before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* ── MAIN ── */
+  .main {}
+
+  .exp-section-label {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 24px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .role {
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .role:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 3px;
+    gap: 12px;
+  }
+
+  .role-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--white);
+    line-height: 1.2;
+  }
+
+  .role-dates {
+    font-size: 10px;
+    color: var(--gold-dim);
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .role-company {
+    font-size: 10.5px;
+    color: var(--gold);
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+  }
+
+  .role-bullets {
+    list-style: none;
+  }
+
+  .role-bullets li {
+    font-size: 11.5px;
+    color: #A09880;
+    line-height: 1.65;
+    padding: 3px 0 3px 14px;
+    position: relative;
+  }
+
+  .role-bullets li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold-dim);
+    font-size: 10px;
+    top: 4px;
+  }
+
+  /* ── EDUCATION ── */
+  .edu-item {
+    margin-bottom: 12px;
+  }
+
+  .edu-title {
+    font-size: 12px;
+    color: var(--white);
+    font-weight: 400;
+  }
+
+  .edu-school {
+    font-size: 11px;
+    color: var(--gold-dim);
+  }
+
+  .edu-year {
+    font-size: 10px;
+    color: var(--muted);
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    body { background: #0A0907; }
+    .page { padding: 32px 40px; }
+    .role { page-break-inside: avoid; }
+
+    /* Collapse sidebar — flows above experience as a compact strip */
+    .body-grid {
+      display: block;
+    }
+
+    .sidebar {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 0 40px;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #2A2518;
+    }
+
+    /* About text spans all columns */
+    .sidebar > .section-label:first-child { grid-column: 1 / -1; }
+    .about-text { grid-column: 1 / -1; margin-bottom: 12px; }
+
+    .exp-section-label { margin-top: 0; }
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div>
+      <div class="header-name">Robert Nowak</div>
+      <div class="header-title">Chief Financial Officer</div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-item">+1 972 987 7347</div>
+      <div class="contact-item">Plano, Texas</div>
+      <div class="contact-item"><a href="mailto:robert.nowak.30@gmail.com">robert.nowak.30@gmail.com</a></div>
+      <div class="contact-item"><a href="https://www.linkedin.com/in/robert-nowak-27a67764" target="_blank">LinkedIn</a></div>
+      <div class="contact-item"><a href="https://robert-nowak-site.vercel.app" target="_blank">robert-nowak-site.vercel.app</a></div>
+    </div>
+  </header>
+
+  <!-- BODY -->
+  <div class="body-grid">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="section-label">Profile</div>
+      <p class="about-text">Finance leader with over 20 years of experience, including 12 years in enterprise software and SaaS businesses within Siemens. Known for translating complex financial and operational challenges into scalable systems — from Quote-to-Order migrations to finance transformation in large matrixed organizations. Personally passionate about AI and automation — building production systems and experimenting with new tools outside of work.</p>
+
+      <div class="section-label">Skills</div>
+      <ul class="skill-list">
+        <li>Financial leadership</li>
+        <li>Finance transformation</li>
+        <li>SaaS business models</li>
+        <li>Advanced financial analysis</li>
+        <li>M&amp;A and Integration</li>
+        <li>Process improvement</li>
+        <li>Stakeholder management</li>
+        <li>SAP-FICO BW / Salesforce</li>
+        <li>Python / HTML / CSS / SQL</li>
+        <li>Data &amp; reporting structures</li>
+        <li>AI &amp; Automation</li>
+      </ul>
+
+      <div class="section-label">Education</div>
+      <div class="edu-item">
+        <div class="edu-title">Diplom Kaufmann</div>
+        <div class="edu-school">University Augsburg, Germany</div>
+        <div class="edu-year">1997 – 2002</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-title">Master of Science</div>
+        <div class="edu-school">Baltic Business School, Sweden</div>
+        <div class="edu-year">2000 – 2001</div>
+      </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <div class="exp-section-label">Experience</div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Chief Financial Officer</div>
+          <div class="role-dates">Apr 2026 – present</div>
+        </div>
+        <div class="role-company">Supplyframe, a Siemens Company</div>
+        <ul class="role-bullets">
+          <li>Appointed as CFO for Supplyframe alongside existing Mendix responsibilities, reflecting expanded scope within the DI SW portfolio. Leading finance operations across Supplyframe's multi-segment revenue model spanning SaaS, media, and e-commerce businesses.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Chief Financial Officer (global)</div>
+          <div class="role-dates">2023 – present</div>
+        </div>
+        <div class="role-company">Mendix, a Siemens Company</div>
+        <ul class="role-bullets">
+          <li>Improved margins by &gt;60% through disciplined cost management, including significant headcount reduction, while scaling revenue by over $100M — delivering profitable growth without proportional resource expansion.</li>
+          <li>Designed and implemented a multi-layer KPI driver tree — spanning sales, marketing, and R&amp;D — connecting capital market-relevant metrics (ARR growth, Rule of 40, Growth Efficiency Indicator) down to truly influenceable operational KPIs, breaking down silos and establishing clear cross-functional accountability, actively being embedded into the quarterly business performance cycle.</li>
+          <li>Sponsored and supported a year-long cross-functional system integration migrating from Zuora to Salesforce CPQ+ and consolidating into the DI SW Salesforce environment — ensuring delivery with zero operational disruption through structured change management across finance, sales, and IT.</li>
+          <li>Led the full integration of Mendix into the DI SW operating model — shifting from a standalone mindset to a "differentiate only where it matters" philosophy. Integrated Finance and IT functions (~100 combined headcount) into the broader DI SW organization through structured change management and transparent communication.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Head of Finance &amp; Performance Management</div>
+          <div class="role-dates">2022 – 2023</div>
+        </div>
+        <div class="role-company">Mendix, a Siemens Company</div>
+        <ul class="role-bullets">
+          <li>Built the sales finance function from scratch modeled on the Global Sales &amp; Customer Support structure — transitioning the team into the broader sales finance organization after two years.</li>
+          <li>Flagged GTM structural risks early and honestly — resisting pressure for optimistic projections in favor of a grounded assessment that gave leadership a true picture of the business.</li>
+          <li>Developed a 5-year SaaS business plan built on achievable assumptions — consistently hitting absolute profit targets each year over four consecutive years with only marginal deviations.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Head of Finance Products MindSphere IoT</div>
+          <div class="role-dates">2020 – 2022</div>
+        </div>
+        <div class="role-company">Siemens, Software</div>
+        <ul class="role-bullets">
+          <li>Served as the key finance partner to the Head of Products, driving significant cost restructuring across the organization.</li>
+          <li>Reduced total organization costs by 60% over two years, amounting to over €50M in savings.</li>
+          <li>Developed an Executive KPI Dashboard covering Demand Generation, Pipeline, Funnel, and SaaS metrics — giving leadership a single view of business performance.</li>
+          <li>Took on a dual role in 2021 supporting the Mendix CTO and his 600+ headcount organization — introducing structured financial management including budgeting, cost center setup, and management reporting where none had previously existed.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Head of Finance, Chief Technology Office</div>
+          <div class="role-dates">2017 – 2020</div>
+        </div>
+        <div class="role-company">Siemens, Software</div>
+        <ul class="role-bullets">
+          <li>Served as finance partner for Siemens Software's foundational SaaS transformation — owning corporate funding decisions across multiple product organizations and evaluating investment proposals through business plans and RoI frameworks reviewed directly with product leadership.</li>
+          <li>Built early SaaS financial fluency alongside senior strategy partners — mastering ARR-based KPIs and SaaS economics ahead of the broader organization, laying the groundwork for products now generally available including Teamcenter X and NX X.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Head of Performance Reporting</div>
+          <div class="role-dates">2013 – 2017</div>
+        </div>
+        <div class="role-company">Siemens, Software</div>
+        <ul class="role-bullets">
+          <li>Personally selected by the Sector CFO — appointed Siemens CFO that same year — to relocate from Germany to the US and improve reporting structures, data integrity, and data quality of the Software Business Unit.</li>
+          <li>Led monthly and quarterly closing process including variance analysis and executive presentations to Division leadership.</li>
+          <li>Coordinated the full budget process across segments with presentations to Division Executives.</li>
+          <li>Rebuilt trust with the Division through close collaboration and implementation of state-of-the-art reporting standards.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Business Analyst, CFO Office — Sector Industry</div>
+          <div class="role-dates">2007 – 2010</div>
+        </div>
+        <div class="role-company">Siemens AG</div>
+        <ul class="role-bullets">
+          <li>Part of a small, high-performance team supporting the Sector CFO across all aspects of the role — covering Mobility, Industry Solutions, and Metal Technologies controlling.</li>
+          <li>Produced monthly reporting packages, drove the budget rollup across all Divisions, and prepared quarterly business reviews conducted directly with the Sector CFO.</li>
+          <li>Developed presentations and speeches for Siemens Capital Market Days and prepared materials for Managing Board meetings.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Manager, Enterprise Risk Management</div>
+          <div class="role-dates">2010 – 2013</div>
+        </div>
+        <div class="role-company">Siemens AG</div>
+        <ul class="role-bullets">
+          <li>Developed and implemented a new Enterprise Risk Management framework in response to the compliance crisis, establishing global standards for risk identification and assessment.</li>
+          <li>Conducted risk management workshops with top management across multiple countries to roll out the new framework.</li>
+          <li>Founding team member of the newly created Risk and Internal Control Office (RIC).</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Manager, Global Accounting Policies</div>
+          <div class="role-dates">2004 – 2007</div>
+        </div>
+        <div class="role-company">Siemens AG</div>
+        <ul class="role-bullets">
+          <li>Managed the transition from US-GAAP to IFRS, including financial reporting guidelines and alignment with auditors and senior management.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Audit Assistant</div>
+          <div class="role-dates">2002 – 2004</div>
+        </div>
+        <div class="role-company">Ernst &amp; Young AG</div>
+        <ul class="role-bullets">
+          <li>Early career foundation in audit and financial reporting standards.</li>
+        </ul>
+      </div>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>

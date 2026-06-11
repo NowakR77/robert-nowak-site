@@ -11,6 +11,7 @@ const navItems = [
   { label: "Market", href: "#market" },
   { label: "House", href: "#house" },
   { label: "Tobi & Benny", href: "#dogs" },
+  { label: "CV", href: "/cv.html", external: true },
 ]
 
 export function Nav() {
@@ -48,6 +49,7 @@ export function Nav() {
             <a
               key={item.label}
               href={item.href}
+              {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className="font-mono text-[11px] text-muted-foreground hover:text-accent tracking-[0.2em] uppercase transition-colors duration-300"
             >
               {item.label}
@@ -80,6 +82,7 @@ export function Nav() {
                   key={item.label}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
+                  {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className="block font-mono text-sm text-muted-foreground hover:text-accent tracking-[0.2em] uppercase transition-colors duration-300"
                 >
                   {item.label}

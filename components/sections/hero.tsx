@@ -36,7 +36,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-wrap gap-2"
           >
-            {["Head of Finance · Siemens", "AI Builder", "In Progress"].map((tag) => (
+            {["CFO · Siemens", "AI Builder", "In Progress"].map((tag) => (
               <span
                 key={tag}
                 className="font-mono text-[10px] text-muted-foreground tracking-[0.2em] uppercase border border-[rgba(200,169,110,0.18)] px-3 py-1.5 rounded-sm"
@@ -52,7 +52,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
             className="font-sans text-muted-foreground text-base lg:text-lg max-w-md leading-relaxed"
           >
-            Head of Finance at Siemens Software. Building AI systems that run in production.
+            CFO at Siemens Software. Building AI systems that run in production.
             Recovering. Building a house. Learning in public.
           </motion.p>
 
