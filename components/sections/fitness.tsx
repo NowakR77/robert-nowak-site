@@ -119,7 +119,7 @@ export function Fitness() {
               {/* Image */}
               <div className="relative overflow-hidden aspect-[4/3] bg-[#131318]">
                 <img
-                  src="https://placehold.co/600x450/131318/C8A96E?text=Life+Time+Frisco"
+                  src="/gym.jpg"
                   alt="Life Time Frisco"
                   className="w-full h-full object-cover opacity-80"
                 />
