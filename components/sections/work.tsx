@@ -6,7 +6,7 @@ import { motion, useInView } from "framer-motion"
 const companies = [
   {
     name: "Mendix",
-    role: "CFO",
+    role: "Head of Finance",
     hq: "Rotterdam, Netherlands",
     summary:
       "The world's leading enterprise low-code platform. Mendix enables large organisations to build, iterate, and deploy applications at a speed that traditional development cannot match. Thousands of enterprise customers — from financial services to manufacturing — use Mendix to close the gap between business needs and IT capacity.",
@@ -15,7 +15,7 @@ const companies = [
   },
   {
     name: "Supplyframe",
-    role: "CFO",
+    role: "Head of Finance",
     hq: "Pasadena, California",
     summary:
       "Intelligence-driven sourcing and design platform for the global electronics supply chain. Supplyframe connects component manufacturers, distributors, and engineers — giving procurement and design teams the data they need to make faster, more resilient sourcing decisions.",
@@ -76,7 +76,7 @@ export function Work() {
                 transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
                 className="font-cormorant font-light text-[clamp(2.8rem,6vw,5rem)] text-foreground leading-[1.05] tracking-[-0.01em]"
               >
-                CFO, Siemens Software.
+                Head of Finance, Siemens Software.
                 <br />
                 <span className="italic text-accent">Two businesses. Two continents.</span>
               </motion.h2>

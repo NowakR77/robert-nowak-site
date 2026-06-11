@@ -13,7 +13,7 @@ export function Footer() {
               Robert Nowak
             </p>
             <p className="font-mono text-[11px] text-muted-foreground tracking-[0.2em] uppercase mt-2">
-              CFO · AI Builder · Munich
+              Head of Finance · AI Builder · Munich
             </p>
           </div>
 
