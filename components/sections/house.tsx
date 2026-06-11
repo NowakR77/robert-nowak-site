@@ -72,7 +72,39 @@ export function House() {
           isInView={isInView}
         />
 
-        <div className="mt-14 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        {/* Hermes block */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-14 grid lg:grid-cols-2 gap-8 items-center border border-[rgba(200,169,110,0.1)] hover:border-[rgba(200,169,110,0.2)] transition-colors duration-500 p-8 lg:p-10"
+          style={{ background: "#0C0A07" }}
+        >
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="w-6 h-px bg-accent" />
+              <p className="font-mono text-[11px] text-accent tracking-[0.25em] uppercase">Hermes · AI Agent</p>
+            </div>
+            <h3 className="font-cormorant font-light text-3xl lg:text-4xl text-foreground leading-[1.1] tracking-[-0.01em]">
+              The agent handles<br />
+              <span className="italic text-accent">the contractor grind.</span>
+            </h3>
+          </div>
+          <div className="space-y-4 font-sans text-sm text-muted-foreground leading-relaxed">
+            <p>
+              Getting quotes from contractors is one of the most time-consuming parts of a build —
+              chasing responses, coordinating availability, comparing proposals across different formats
+              and timelines. I handed that workflow to Hermes.
+            </p>
+            <p>
+              The agent reaches out to contractors directly, books appointments, follows up on missing
+              quotes, and normalises everything into a single comparison. By the time it lands with me,
+              the field is already ranked. I make the call — Hermes does the legwork.
+            </p>
+          </div>
+        </motion.div>
+
+        <div className="mt-12 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Timeline */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}

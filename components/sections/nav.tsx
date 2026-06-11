@@ -11,7 +11,7 @@ const navItems = [
   { label: "Market", href: "#market" },
   { label: "House", href: "#house" },
   { label: "Tobi & Benny", href: "#dogs" },
-  { label: "CV", href: "/cv.html", external: true },
+  { label: "Curriculum Vitae", href: "/cv.html", external: true },
 ]
 
 export function Nav() {
