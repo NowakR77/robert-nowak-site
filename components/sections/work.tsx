@@ -76,7 +76,7 @@ export function Work() {
                 transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
                 className="font-cormorant font-light text-[clamp(2.8rem,6vw,5rem)] text-foreground leading-[1.05] tracking-[-0.01em]"
               >
-                CFO, Siemens Software.
+                CFO of Siemens Software businesses.
                 <br />
                 <span className="italic text-accent">Two businesses. Two continents.</span>
               </motion.h2>
