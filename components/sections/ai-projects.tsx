@@ -16,6 +16,7 @@ const projects = [
     statusColor: "accent" as const,
     href: "https://www.youtube.com/watch?v=gb5TlGw6Uks&list=LL",
     linkLabel: "Watch on YouTube →",
+    image: "/hermes.jpg",
   },
   {
     name: "AI Avatar",
@@ -39,6 +40,7 @@ const projects = [
     statusColor: "accent" as const,
     href: "https://www.youtube.com/watch?v=8K1z-5-74w8",
     linkLabel: "Watch on YouTube →",
+    image: "/call_center.jpg",
   },
   {
     name: "Face-Tracking Camera",
